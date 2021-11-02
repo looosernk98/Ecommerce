@@ -1,10 +1,30 @@
 import './App.css';
+import React,{useEffect\} from "react"
+import Header from './components/layout/header/header';
+import {BrowserRouter as Router} from 'react-router-dom'
+import webFont from 'webfontloader'
 
 function App() {
+
+
+
+  useEffect(()=>{
+
+    webFont.load({
+      google:{
+        families:[]
+      }
+     
+    })
+
+  },[])
+
+
   return (
-    <div className="App">
-       <h1>started frontend</h1>
-    </div>
+    <Router>
+      <Header/>
+    </Router>
+   
   );
 }
 
