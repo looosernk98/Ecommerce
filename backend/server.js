@@ -10,7 +10,7 @@ connectDatabase();
 
 // handling uncaught exception
 
-process.on('uncaughtException',()=>{
+process.on('uncaughtException',(err)=>{
   console.log(`Error: ${err.message}`);
   console.log(`Shutting down the server due to Unhandled Promise Rejection`);
 

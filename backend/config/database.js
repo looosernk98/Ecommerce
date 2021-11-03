@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 
-
-
 const connectDatabase = ()=>{
-    mongoose.connect("mongodb+srv://niru:I86AQWLIWT5hg9SU@cluster0.apooo.mongodb.net/Ecommerce",{
+    mongoose.connect(process.env.DB_URI,{
         useNewUrlParser:true,
         useUnifiedTopology:true,
     })
